@@ -12,7 +12,7 @@ public class Automata1 {
         Scanner sc = new Scanner(System.in);
         System.out.println("__Enter String__");
         String input = sc.nextLine();
-        Pattern p = Pattern.compile("((@|#)[a-zA-Z0-9]*?)|(#([a-zA-Z0-9]|@[a-zA-Z0-9])*)");
+        Pattern p = Pattern.compile("((@|#|[a-zA-Z])[a-zA-Z0-9]*?)|(#([a-zA-Z0-9]|@[a-zA-Z0-9])*)");
         if(p.matcher(input).matches()){
             System.out.println("This is valid in language A#.");
         }
