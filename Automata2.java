@@ -13,7 +13,7 @@ public class Automata2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("__Enter String__");
         String input = sc.nextLine();
-        Pattern p = Pattern.compile("(\\(\\)|(\\((:|%|\\?|[a-zA-Z0-9]){1,6}\\)))|(\\^([a-zA-Z0-9]){1,6})|(\\[[0-9]((:|%|\\?|[a-zA-Z0-9]){1,5})?)");
+        Pattern p = Pattern.compile("(\\((:|%|\\?|[a-zA-Z0-9])?{1,6}\\))|(\\^([a-zA-Z0-9]){1,6})|(\\[[0-9]((:|%|\\?|[a-zA-Z0-9]){1,5})?)");
         if (p.matcher(input).matches()) {
             System.out.println("Folder created!.");
         } else {
