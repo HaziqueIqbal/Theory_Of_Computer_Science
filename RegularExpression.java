@@ -26,9 +26,9 @@ public class RegularExpression {
             "new", "null", "package", "private", "protected", "public",
             "return", "short", "static", "strictfp", "super", "switch",
             "synchronized", "this", "throw", "throws", "transient", "true",
-            "try", "void", "volatile", "while"};
+            "try", "void", "volatile", "while", "String"};
         //check for airthmatic operators and Uniary operators are also included
-        String airthmaticOperators[] = {"+", "-", "*", "^", "/", "%", "++", "--"}; 
+        String airthmaticOperators[] = {"+", "-", "*", "^", "/", "%", "++", "--"};
         //Assignment operators
         String assignmentoperator[] = {"=", "+=", "-=", "*=", "/=", "%="};
         //Pattern for identifier
@@ -56,7 +56,7 @@ public class RegularExpression {
             if (identifier.matcher(inputArray[i]).matches()) {
                 System.out.println("'" + inputArray[i] + "' is an Identifier!");
             }
-            
+
             //check for airthmatic operators
             for (String am : airthmaticOperators) {
                 if (inputArray[i] == null ? am == null : inputArray[i].equals(am)) {
@@ -73,19 +73,19 @@ public class RegularExpression {
             }
             //check for integer constant
             if (integerConstant.matcher(inputArray[i]).matches()) {
-                System.out.println("'" + inputArray[i] + "' is an Integer Constant!");     
+                System.out.println("'" + inputArray[i] + "' is an Integer Constant!");
             }
             //check for float constant
             if (floatConstant.matcher(inputArray[i]).matches()) {
-                System.out.println("'" + inputArray[i] + "' is an Float Constant!");     
+                System.out.println("'" + inputArray[i] + "' is an Float Constant!");
             }
             //check for string constant
             if (stringConstant.matcher(inputArray[i]).matches()) {
-                System.out.println(inputArray[i] + " is an String Constant!");     
+                System.out.println(inputArray[i] + " is an String Constant!");
             }
             //check for char constant
             if (charConstant.matcher(inputArray[i]).matches()) {
-                System.out.println(inputArray[i] + " is an Char Constant!");     
+                System.out.println(inputArray[i] + " is an Char Constant!");
             }
             //check for semi-colon
             if (";".equals(inputArray[i])) {
